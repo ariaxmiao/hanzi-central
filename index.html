@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Chinese Stroke Animations</title>
-  <script src="https://unpkg.com/hanzi-writer@2.1.2/dist/hanzi-writer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
   <style>
     .character-container {
       display: inline-block;
@@ -16,17 +16,15 @@
 </head>
 <body>
   <h1>Chinese Stroke Animations</h1>
-
-  <!-- Containers for each character -->
-  <div id="char1" class="character-container"></div>
-  <div id="char2" class="character-container"></div>
-  <div id="char3" class="character-container"></div>
+  
+  <div id="character-target-div"></div>
 
   <script>
-    // Load multiple characters
-    HanziWriter.create('char1', '学', { width: 150, height: 150, padding: 5, strokeAnimationSpeed: 1.2 });
-    HanziWriter.create('char2', '中', { width: 150, height: 150, padding: 5, strokeAnimationSpeed: 1.2 });
-    HanziWriter.create('char3', '文', { width: 150, height: 150, padding: 5, strokeAnimationSpeed: 1.2 });
+    var writer = HanziWriter.create('character-target-div', '我', {
+      width: 100,
+      height: 100,
+      padding: 5
+    });
   </script>
 </body>
 </html>
